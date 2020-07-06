@@ -1,1 +1,1 @@
-﻿"hello there" 'We are testing git status'
+﻿"hello there" 'We are testing git status'master version
