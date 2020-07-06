@@ -1,1 +1,1 @@
-“hello there”
+﻿"hello there" 'We are testing git status'
