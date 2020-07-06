@@ -9,7 +9,8 @@ import json
 import argparse
 from collections import OrderedDict
 from time import sleep
-
+import urllib3
+urllib3.disable_warnings()
 def getStockData(ticker):
 	url = "http://finance.yahoo.com/quote/%s?p=%s"%(ticker,ticker)
 	response = requests.get(url, verify=False)
@@ -56,5 +57,6 @@ if __name__=="__main__":
                         print ("Writing data to output file")
                         with open('%s-summary.json'%(ticker),'w') as fp:
                                 json.dump(scraped_data,fp,indent = 4)
+                        print("\nStock Quotes retrieved successfully!")   
                 except Exception as e:
                         print(e)
